@@ -7,7 +7,7 @@ import org.mockito.Mockito;
 class TaxCalculatorTest {
 
 	@Test
-	void test() {
+	void withNdsWhenPrice100ThenReturn120() {
 		NdsResolver mock = Mockito.mock(NdsResolver.class);
 		Mockito.when(mock.getNds()).thenReturn(0.2);
 		double priceWithNds = new TaxCalculator(mock).withNds(100);
